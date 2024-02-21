@@ -4,4 +4,9 @@ module "myvnet" {
       location = "eastus"
       name = "ntier-rg"
     }
+    source = "./Rootmodule/vnet"
+    vnet_details = {
+      name = "my-vnet"
+      address_space = ["10.0.0.0/16"]
+    }
 }
